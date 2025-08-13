@@ -20,8 +20,7 @@ cmds = {
     'disk': "df -h | awk '$NF==\"/\"{printf \"Disk: %d/%dGB %s\", $3,$2,$5}'"
 }
 
-lv2dc = OrderedDict({'lv3': 0, 'lv2': 0.25, 'lv1': 0.5, 'lv0': 0.75})
-
+lv2dc = OrderedDict({'lv4': 0, 'lv3': 0.5, 'lv2': 0.10, 'lv1': 0.5, 'lv0': 0.2})
 
 def check_output(cmd):
     return subprocess.check_output(cmd, shell=True).decode().strip()
